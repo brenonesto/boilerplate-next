@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -12,7 +13,7 @@ const customJestConfig = {
   moduleDirectories: ['node_modules', '<rootDir>/'],
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts(x)?'],
+  collectCoverageFrom: ['src/**/*.ts(x)?', '!src/**/stories.tsx'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
 
   // If you're using [Module Path Aliases](https://nextjs.org/docs/advanced-features/module-path-aliases),

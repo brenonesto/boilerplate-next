@@ -9,9 +9,11 @@
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
     "test:watch": "jest --watch",
+    "generate": "yarn plop --plopfile ./generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s ./public"
   },
+  "type": "module",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -68,6 +70,7 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-styled-components": "^7.1.1",
     "lint-staged": "^13.1.0",
+    "plop": "^3.1.1",
     "prettier": "2.8.3",
     "ts-node": "^10.9.1"
   }
